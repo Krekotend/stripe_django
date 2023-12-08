@@ -1,0 +1,13 @@
+{% extends  'main_items/base.html' %}
+
+{% block title %} Item {% endblock %}
+
+{% block content %}
+    <h3><pre> Name - {{ item.name }}</pre></h3>
+    <h3><pre> Discription - {{ item.description }}</pre></h3>
+    <h3><pre> Price - {{ item.price }}</pre></h3>
+
+    <form action="/buy/{{item.id}}" >
+        <button>BUY</button>
+    </form>
+{% endblock %}
